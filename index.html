@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎬 Movie Search & Watchlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="top"></div>
+
+  <nav>
+    <ul class="navbar">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#movie-result">Search</a></li>
+      <li><a href="#watchlist">Watchlist</a></li>
+    </ul>
+  </nav>
+
+  <h1>🎥 Movie Explorer</h1>
+
+  <div class="search-box">
+    <input type="text" id="movie-input" placeholder="Search movies..." />
+    <button onclick="searchMovies()">Search</button>
+  </div>
+
+  <h2>🔍 Search Results</h2>
+  <div id="movie-result" class="movie-container"></div>
+
+  <h2>⭐ My Watchlist</h2>
+  <button id="clear-watchlist-btn">Clear Watchlist</button>
+  <div id="watchlist" class="movie-container"></div>
+
+  <!-- Modal for movie details -->
+  <div id="movie-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

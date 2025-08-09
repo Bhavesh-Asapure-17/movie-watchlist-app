@@ -5,6 +5,7 @@ body {
   color: #ffffff;
 }
 
+/* Navbar container */
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -16,6 +17,7 @@ body {
   z-index: 1000;
 }
 
+/* Brand Name Styling */
 .brand {
   font-size: 1.4rem;
   font-weight: 900;

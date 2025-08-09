@@ -153,6 +153,7 @@ function showMovieDetails(imdbID) {
     });
 }
 
+// Close Modal Logic
 document.getElementById("modal-close").onclick = function () {
   document.getElementById("movie-modal").style.display = "none";
 };

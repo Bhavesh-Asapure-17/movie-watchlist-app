@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>🎬 Movie Search & Watchlist</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>🎬 Movie Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar-container">
+      <div class="brand">Movie<span>Explorer</span></div>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#search-section">Search</a></li>
+        <li><a href="#watchlist-section">Watchlist</a></li>
+      </ul>
+    </nav>
 
-  <div id="top"></div>
+    <section id="home" class="section">
+      <h1>🎥 Movie Explorer</h1>
+      <p class="description">
+        Welcome to Movie Explorer – your ultimate gateway to the world of
+        cinema! Whether you’re hunting for the latest box-office hits, hidden
+        indie gems, or nostalgic classics, we’ve got you covered. Search
+        effortlessly, explore detailed movie info, and create your personalized
+        watchlist in seconds. With Movie Explorer, every movie
+        night becomes unforgettable – because the perfect film is just a click
+        away!
+      </p>
+    </section>
 
-  <nav>
-    <ul class="navbar">
-      <li><a href="#top">Home</a></li>
-      <li><a href="#movie-result">Search</a></li>
-      <li><a href="#watchlist">Watchlist</a></li>
-    </ul>
-  </nav>
+    <section id="search-section" class="section">
+      <h2>🔍 Search Movies</h2>
+      <div class="search-box">
+        <input type="text" id="movie-input" placeholder="Search movies..." />
+        <button onclick="searchMovies()">Search</button>
+      </div>
+      <div id="movie-result" class="movie-container"></div>
+    </section>
 
-  <h1>🎥 Movie Explorer</h1>
+    <div id="movie-result" class="movie-container"></div>
+    <button id="load-more" class="load-more-btn">Load More</button>
 
-  <div class="search-box">
-    <input type="text" id="movie-input" placeholder="Search movies..." />
-    <button onclick="searchMovies()">Search</button>
-  </div>
-
-  <h2>🔍 Search Results</h2>
-  <div id="movie-result" class="movie-container"></div>
-
-  <h2>⭐ My Watchlist</h2>
-  <button id="clear-watchlist-btn">Clear Watchlist</button>
-  <div id="watchlist" class="movie-container"></div>
-
-  <!-- Modal for movie details -->
-  <div id="movie-modal" class="modal">
-    <div class="modal-content">
-      <span id="modal-close" class="close">&times;</span>
-      <div id="modal-body"></div>
+    <section id="watchlist-section" class="section">
+      <h2>⭐ My Watchlist</h2>
+      <button id="clear-watchlist-btn" onclick="clearWatchlist()">
+        Clear Watchlist
+      </button>
+      <div id="watchlist" class="movie-container"></div>
+    </section
+      
+    <div id="movie-modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

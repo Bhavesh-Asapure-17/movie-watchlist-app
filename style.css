@@ -3,6 +3,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #0f0f1a, #1a1a2e);
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 /* Navbar container */
@@ -14,7 +15,7 @@ body {
   padding: 15px 40px;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 /* Brand Name Styling */
@@ -55,28 +56,30 @@ body {
   color: #ff4b2b;
 }
 
-
+/* Section */
 .section {
   padding: 40px 20px;
   text-align: center;
 }
 
+/* Big Tagline */
 .description {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: #e5e5e5;
   text-align: center;
   max-width: 950px;
   margin: 15px auto 40px;
-  line-height: 1.8;
-  padding: 15px 25px;
+  line-height: 2;
+  padding: 25px 35px;
   background: rgba(0, 0, 0, 0.4);
-  border-left: 4px solid #ff4b2b;
-  border-right: 4px solid #ff416c;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(255, 65, 108, 0.5);
+  border-left: 6px solid #ff4b2b;
+  border-right: 6px solid #ff416c;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
 }
 
+/* Search Box */
 .search-box {
   display: flex;
   justify-content: center;
@@ -107,6 +110,7 @@ body {
   background-color: #ff1c2e;
 }
 
+/* Movie Cards */
 .movie-container {
   display: flex;
   flex-wrap: wrap;
@@ -163,6 +167,7 @@ body {
   color: white;
 }
 
+/* Watchlist Button */
 #clear-watchlist-btn {
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -177,32 +182,41 @@ body {
   background-color: #e50914;
 }
 
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
-  padding-top: 80px;
+  z-index: 5000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(15, 15, 15, 0.9);
+  overflow-y: auto;
+  background-color: rgba(15, 15, 15, 0.95);
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
   background-color: #222;
-  margin: auto;
+  margin: 20px;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
   color: white;
+  position: relative;
 }
 
 .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
@@ -212,6 +226,7 @@ body {
   color: #e50914;
 }
 
+/* Load More Button */
 .load-more-btn {
   display: none;
   margin: 20px auto;
